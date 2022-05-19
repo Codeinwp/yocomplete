@@ -9,7 +9,45 @@
 .btn-group {
     width: 425px;
     margin-top: 20px;
+    margin-bottom: 20px;
  }
  .btn-wrap {
     padding: 40px;
+}
+.container {
+    margin-top: 10px;
+}
+input.shortcut__keyword, textarea.shortcut__text {
+    width: 100%;
+    margin-top: 10px;
+    max-width:  400px;
+}
+textarea {
+    height:  100px;
+}
+.profiles .btn-outline-primary {
+    float:left;
+    width: auto;
+}
+.profile {
+    display:  none;
+    float: right;
+    margin-left: -100%;
+    width: 100%;
+    margin-top:  50px;
+}
+.profile.active {
+    display:  block;
+}
+.container.shortcuts, .container.all_profiles {
+    border:  5px solid #0d6efd;
+    padding:  20px;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.wrap_profile {
+    width:  100%;
 }
