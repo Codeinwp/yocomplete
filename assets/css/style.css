@@ -1,0 +1,15 @@
+.head-wrap {
+    background: #0d6efd;
+    color: #fff;
+    padding: 20px;
+}
+.head-wrap h2{
+    font-size: 16px;
+}
+.btn-group {
+    width: 425px;
+    margin-top: 20px;
+ }
+ .btn-wrap {
+    padding: 40px;
+}
