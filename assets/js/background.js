@@ -20,12 +20,22 @@ function sayYo( e ) {
             clearTimeout( timer );
             timer = setTimeout(function() {
                 let text;
-                if (textarea.value.search( re ) !== -1) {
-                    textarea.value = textarea.value.replace( re, function( $0, $1 ) {
-                        const sc = $1.substring( 0, $1.length - 1 );
-                        text = shortcuts[ sc ];
-                        return text;
-                    });
+                if ( textarea.isContentEditable ) {
+                    if (textarea.innerHTML.search( re ) !== -1) {
+                        textarea.innerHTML = textarea.innerHTML.replace( re, function( $0, $1 ) {
+                            const sc = $1.substring( 0, $1.length - 1 );
+                            text = shortcuts[ sc ];
+                            return text;
+                        });
+                    }
+                } else {
+                    if (textarea.value.search( re ) !== -1) {
+                        textarea.value = textarea.value.replace( re, function( $0, $1 ) {
+                            const sc = $1.substring( 0, $1.length - 1 );
+                            text = shortcuts[ sc ];
+                            return text;
+                        });
+                    }
                 }
             }, 200);
         }
